@@ -1,7 +1,7 @@
 <?php
 
 $nome                = $_REQUEST["nome_cli"];
-$tipo_doc            = $_REQUEST["tipo_documento"];
+$tipo_doc            = $_REQUEST["tipo_documento_cli"];
 $doc                 = $_REQUEST["documento_cli"];
 $insc_estadual       = $_REQUEST["inscricao_estadual_cli"];
 $email               = $_REQUEST["email_cli"];
@@ -26,7 +26,7 @@ switch ($_REQUEST['acao']) {
         $res = $conn->query($sql) or die($conn->error);
 
         if($res == true) {
-            print "<br><div class='alert alert-success'>Cadastrou com sucesso!</div>";
+            print "<br><div class='alert alert-success text-center'>Cadastrou com sucesso!</div>";
         }else {
             print "<br><div class='alert alert-danger'>Não foi possível cadastrar.</div>";
         }

@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Cadastrar Contato</h1>
+<h1 class="text-center">Cadastrar Contato</h1>
 <form action="index.php?page=sal-agenda" method="post">
 
     <input type="hidden" name="acao" value="cadastrar" />
@@ -23,7 +23,7 @@
 
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-right">
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
     </div>

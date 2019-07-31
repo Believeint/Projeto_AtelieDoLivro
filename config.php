@@ -23,6 +23,7 @@ switch (@$_REQUEST['page']){
     case 'edi-agenda':
         include "agenda/editar-agenda.php";
         break;
+    //CLIENTE
     case 'cad-cliente':
         include "cliente/cadastrar-cliente.php";
         break;
@@ -38,6 +39,24 @@ switch (@$_REQUEST['page']){
     case 'exi-cliente':
         include "cliente/exibir-cliente.php";
         break;
+    //TOMADOR DE SERVICO
+    case 'cad-ts':
+        include "ts/cadastrar-ts.php";
+        break;
+    case 'sal-ts':
+        include "ts/salvar-ts.php";
+        break;
+    case 'edi-ts':
+        include "ts/editar-ts.php";
+        break;
+    case 'lis-ts':
+        include "ts/listar-ts.php";
+        break;
+    case 'exi-ts':
+        include "ts/exibir-ts.php";
+        break;
+    //SERVICO
+
     default:
         include 'dashboard.php';
         break;

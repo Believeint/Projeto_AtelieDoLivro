@@ -1,4 +1,4 @@
-<h1>Editar Cliente</h1>
+<h1 class="text-center">Editar Cliente</h1>
 <?php
 
 $sql = "SELECT * FROM tbl_cliente WHERE id_cli=" . $_REQUEST['id_cli'];
@@ -8,6 +8,7 @@ $res = $conn->query($sql);
 $row = $res->fetch_assoc();
 
 ?>
+<div class="container">
 <form action="index.php?page=sal-cliente" method="post">
 <input type="hidden" name="acao" value="editar">
 <input type="hidden" name="id_cli" value="<?php print $row['id_cli']?>">
@@ -142,3 +143,4 @@ $row = $res->fetch_assoc();
         <button type="submit" class="btn btn-primary">Atualizar</button>
 
 </form>
+</div>

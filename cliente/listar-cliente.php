@@ -7,6 +7,7 @@ $res = $conn->query($sql);
 $qtd = $res->num_rows;
 
 if($qtd > 0) {
+    print "<div class='container'>";
     print "<p>Encontrei <b>$qtd</b> resultado(s)</p>";
     print "<table class='table'>";
     print "<tr>";
@@ -14,7 +15,7 @@ if($qtd > 0) {
     print "<th scope='col'>Nome/R.social</th>";
     print "<th scope='col'>CNPJ/CPF</th>";
     print "<th scope='col'>Inscrição Estadual</th>";
-    print "<th scope='col'>Telefone</th>";
+    print "<th scope='col'>Contato</th>";
     print "<th scope='col'>Ações</th>";
     print "</tr>";
     $count = 1;
@@ -31,6 +32,7 @@ if($qtd > 0) {
                     <button onclick=\"if(confirm('tem certeza que deseja excluir?')){location.href='index.php?page=sal-cliente&acao=excluir&id_cli=" . $row['id_cli'] . "';}else{false;};\" class='btn btn-danger'>Excluir</button>
                     <button class='btn btn-primary' onclick=\"location.href='index.php?page=exi-cliente&id_cli=" . $row["id_cli"] . "';\">Exibir</button>
         </td>";
+        print "</div>";
     }
     
 }else {

@@ -8,10 +8,10 @@ $row = $res->fetch_assoc();
 
 ?>
 <div class="container">
-<table class="table table-dark">
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th scope="col" class="text-center">Informações do Cliente</th>
+      <th scope="row" class="text-center" colspan="2">Informações do Cliente</th>
     </tr>
   </thead>
   <tbody>
@@ -32,12 +32,44 @@ $row = $res->fetch_assoc();
     <td><?php print $row['inscricao_estadual_cli']?></td>
     </tr>
     <tr>
+    <th>Contato</th>
+    <td><?php print $row['telefone_cli']?></td>
+    </tr>
+    <tr>
     <th scope="row">Email</th>
     <td><?php print $row['email_cli']?></td>
     </tr>
     <tr>
     <th scope="row">Logradouro</th>
     <td><?php print $row['logradouro_cli']?></td>
+    </tr>
+    <tr>
+    <th>Nº</th>
+    <td><?php print $row['n_cli']?></td>
+    </tr>
+    <tr>
+    <th>País</th>
+    <td><?php print $row['pais_cli']?></td>
+    </tr>
+    <tr>
+    <th>Complemento</th>
+    <td><?php print $row['complemento_cli']?></td>
+    </tr>
+    <tr>
+    <th>UF</th>
+    <td><?php print $row['uf_cli']?></td>
+    </tr>
+    <tr>
+    <th>Bairro</th>
+    <td><?php print $row['bairro_cli']?></td>
+    </tr>
+    <tr>
+    <th>Municipio</th>
+    <td><?php print $row['municipio_cli']?></td>
+    </tr>
+    <tr>
+    <th>Cep</th>
+    <td><?php print $row['cep_cli']?></td>
     </tr>
 
   </tbody>

@@ -1,6 +1,7 @@
+<h1 class="text-center">Meus Contatos</h1>
 <?php
 
-$sql = "SELECT * FROM agenda ORDER BY nome_agenda";
+$sql = "SELECT * FROM tbl_agenda ORDER BY nome_agenda";
 
 $res = $conn->query($sql);
 
@@ -8,6 +9,7 @@ $qtd = $res->num_rows;
 
 if($qtd > 0) 
 {
+    print "<div class='container'>";
     print "<p>Encontrei <b>". $qtd . "</b> resultado(s)</p>";
     print "<table class='table table-bordered table-striped table-hover'>";
     print "<tr>";
@@ -29,7 +31,11 @@ if($qtd > 0)
         <button onclick=\"if(confirm('tem certeza que deseja excluir?')){location.href='index.php?page=sal-agenda&acao=excluir&id_agenda=".$row["id_agenda"]."';}else{false;};\"  class='btn btn-danger'>Excluir</button>        
                </td>";
         print "</tr>";
+        print "</div>";
+
     }
+}else {
+    print '<br><div class="alert alert-primary text-center">Não encontrei resultados...</div>';
 }
 
 
