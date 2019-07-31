@@ -44,8 +44,8 @@
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tom. Serv.</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Listar</a>
-      <a class="dropdown-item" href="#">Cadastrar</a>
+      <a class="dropdown-item" href="index.php?page=lis-ts">Listar</a>
+      <a class="dropdown-item" href="index.php?page=cad-ts">Cadastrar</a>
     </div>
   </li>
   <li class="nav-item">

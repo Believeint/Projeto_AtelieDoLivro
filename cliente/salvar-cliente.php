@@ -1,19 +1,19 @@
 <?php
 
-$nome                = $_REQUEST["nome_cli"];
-$tipo_doc            = $_REQUEST["tipo_documento_cli"];
-$doc                 = $_REQUEST["documento_cli"];
-$insc_estadual       = $_REQUEST["inscricao_estadual_cli"];
-$email               = $_REQUEST["email_cli"];
-$logradouro          = $_REQUEST["logradouro_cli"];
-$n                   = $_REQUEST["n_cli"];
-$pais                = $_REQUEST["pais_cli"];
-$complemento         = $_REQUEST["complemento_cli"];
-$uf                  = $_REQUEST["uf_cli"];
-$bairro              = $_REQUEST["bairro_cli"];
-$municipio           = $_REQUEST["municipio_cli"];
-$cep                 = $_REQUEST["cep_cli"];
-$telefone            = $_REQUEST["telefone_cli"];
+$nome                = @$_REQUEST["nome_cli"];
+$tipo_doc            = @$_REQUEST["tipo_documento_cli"];
+$doc                 = @$_REQUEST["documento_cli"];
+$insc_estadual       = @$_REQUEST["inscricao_estadual_cli"];
+$email               = @$_REQUEST["email_cli"];
+$logradouro          = @$_REQUEST["logradouro_cli"];
+$n                   = @$_REQUEST["n_cli"];
+$pais                = @$_REQUEST["pais_cli"];
+$complemento         = @$_REQUEST["complemento_cli"];
+$uf                  = @$_REQUEST["uf_cli"];
+$bairro              = @$_REQUEST["bairro_cli"];
+$municipio           = @$_REQUEST["municipio_cli"];
+$cep                 = @$_REQUEST["cep_cli"];
+$telefone            = @$_REQUEST["telefone_cli"];
 
 switch ($_REQUEST['acao']) {
 
@@ -51,7 +51,7 @@ switch ($_REQUEST['acao']) {
 
     case 'excluir':
 
-    $sql = "DELETE FROM tbl_cliente WHERE id_cliente" . $_REQUEST['id_cliente'];
+    $sql = "DELETE FROM tbl_cliente WHERE id_cli=" . $_REQUEST['id_cli'];
 
     $res = $conn->query($sql) or die($conn->error);
 
